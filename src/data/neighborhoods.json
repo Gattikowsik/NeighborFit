@@ -1,0 +1,23 @@
+[
+  { "id": "indiranagar", "name": "Indiranagar", "safety": 4, "affordability": 2, "transport": 5, "greenSpaces": 3, "nightlife": 5, "education": 4, "techProximity": 4 },
+  { "id": "whitefield", "name": "Whitefield", "safety": 3, "affordability": 3, "transport": 4, "greenSpaces": 4, "nightlife": 3, "education": 4, "techProximity": 5 },
+  { "id": "jayanagar", "name": "Jayanagar", "safety": 5, "affordability": 4, "transport": 3, "greenSpaces": 5, "nightlife": 2, "education": 5, "techProximity": 3 },
+  { "id": "koramangala", "name": "Koramangala", "safety": 3, "affordability": 2, "transport": 4, "greenSpaces": 3, "nightlife": 5, "education": 3, "techProximity": 5 },
+  { "id": "malleshwaram", "name": "Malleshwaram", "safety": 4, "affordability": 3, "transport": 4, "greenSpaces": 4, "nightlife": 2, "education": 5, "techProximity": 2 },
+  { "id": "hebbal", "name": "Hebbal", "safety": 4, "affordability": 3, "transport": 4, "greenSpaces": 3, "nightlife": 2, "education": 4, "techProximity": 4 },
+  { "id": "banashankari", "name": "Banashankari", "safety": 5, "affordability": 4, "transport": 3, "greenSpaces": 4, "nightlife": 2, "education": 5, "techProximity": 3 },
+  { "id": "btm", "name": "BTM Layout", "safety": 3, "affordability": 3, "transport": 4, "greenSpaces": 3, "nightlife": 4, "education": 4, "techProximity": 5 },
+  { "id": "marathahalli", "name": "Marathahalli", "safety": 3, "affordability": 3, "transport": 4, "greenSpaces": 2, "nightlife": 4, "education": 3, "techProximity": 5 },
+  { "id": "rajajinagar", "name": "Rajajinagar", "safety": 5, "affordability": 4, "transport": 3, "greenSpaces": 4, "nightlife": 2, "education": 5, "techProximity": 3 },
+  { "id": "hsr", "name": "HSR Layout", "safety": 4, "affordability": 3, "transport": 4, "greenSpaces": 4, "nightlife": 4, "education": 4, "techProximity": 5 },
+  { "id": "bellandur", "name": "Bellandur", "safety": 3, "affordability": 3, "transport": 4, "greenSpaces": 3, "nightlife": 3, "education": 3, "techProximity": 5 },
+  { "id": "frazer", "name": "Frazer Town", "safety": 4, "affordability": 3, "transport": 4, "greenSpaces": 3, "nightlife": 4, "education": 4, "techProximity": 4 },
+  { "id": "vijayanagar", "name": "Vijayanagar", "safety": 5, "affordability": 4, "transport": 3, "greenSpaces": 4, "nightlife": 2, "education": 4, "techProximity": 2 },
+  { "id": "rt_nagar", "name": "RT Nagar", "safety": 4, "affordability": 3, "transport": 4, "greenSpaces": 3, "nightlife": 3, "education": 4, "techProximity": 3 },
+  { "id": "basavanagudi", "name": "Basavanagudi", "safety": 5, "affordability": 4, "transport": 3, "greenSpaces": 4, "nightlife": 2, "education": 5, "techProximity": 3 },
+  { "id": "domlur", "name": "Domlur", "safety": 4, "affordability": 3, "transport": 4, "greenSpaces": 2, "nightlife": 4, "education": 3, "techProximity": 5 },
+  { "id": "ulsoor", "name": "Ulsoor", "safety": 4, "affordability": 3, "transport": 4, "greenSpaces": 3, "nightlife": 4, "education": 3, "techProximity": 4 },
+  { "id": "yelahanka", "name": "Yelahanka", "safety": 4, "affordability": 4, "transport": 3, "greenSpaces": 4, "nightlife": 2, "education": 4, "techProximity": 2 },
+  { "id": "sanjaynagar", "name": "Sanjay Nagar", "safety": 4, "affordability": 3, "transport": 3, "greenSpaces": 4, "nightlife": 2, "education": 4, "techProximity": 3 },
+  { "id": "nagawara", "name": "Nagawara", "safety": 3, "affordability": 3, "transport": 4, "greenSpaces": 3, "nightlife": 3, "education": 3, "techProximity": 4 }
+]
