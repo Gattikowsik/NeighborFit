@@ -1,44 +1,80 @@
+/* ==== CONTAINER ==== */
 .results {
-  padding: 2rem;
-  max-width: 800px;
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
   margin: auto;
+  font-family: 'Poppins', sans-serif;
 }
 
-.carousel-container {
+/* ==== HEADING ==== */
+.results h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0077cc;
+}
+
+/* ==== CAROUSEL CONTAINER ==== */
+.carousel-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
+  gap: 1.5rem;
   flex-wrap: nowrap;
+  padding: 1rem 0;
 }
 
+/* ==== ARROWS ==== */
 .carousel-arrow {
+  background: white;
+  color: #0077cc;
+  border: 2px solid #0077cc;
+  font-size: 1.8rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-arrow:hover {
   background-color: #0077cc;
   color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .carousel-arrow:disabled {
-  background-color: #ccc;
+  background-color: #eee;
+  border-color: #ccc;
+  color: #aaa;
   cursor: not-allowed;
 }
-
+/* ==== NEIGHBORHOOD CARDS CONTAINER ==== */
 .results-grid {
   display: flex;
-  gap: 1rem;
-  flex-wrap: nowrap;
+  gap: 1.5rem;
   overflow-x: auto;
   scroll-behavior: smooth;
+  padding-bottom: 1rem;
 }
 
+.results-grid::-webkit-scrollbar {
+  display: none;
+}
+.results-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==== PAGINATION ==== */
 .pagination-info {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 1rem;
   color: #444;
+  font-weight: 500;
 }

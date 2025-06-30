@@ -57,13 +57,14 @@ const Results = () => {
         </p>
       ) : (
         <>
-          <div className="carousel-container">
+          <div className="carousel-wrapper">
             <button
               onClick={handlePrev}
               className="carousel-arrow"
               disabled={currentIndex === 0}
+              aria-label="Previous"
             >
-              ←
+              ‹
             </button>
 
             <div className="results-grid">
@@ -76,16 +77,12 @@ const Results = () => {
               onClick={handleNext}
               className="carousel-arrow"
               disabled={currentIndex + cardsPerPage >= matches.length}
+              aria-label="Next"
             >
-              →
+              ›
             </button>
           </div>
 
-          <div className="pagination-info">
-            Showing cards {currentIndex + 1} to{" "}
-            {Math.min(currentIndex + cardsPerPage, matches.length)} of{" "}
-            {matches.length}
-          </div>
         </>
       )}
     </div>

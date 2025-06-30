@@ -76,7 +76,7 @@ const Home = () => {
           </p>
 
           <div className="footer-socials">
-            <a href="https://github.com/Gattikowsik" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/Gattikowsik/NeighborFit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i className="fab fa-github"></i>
             </a>
             <a href="https://www.linkedin.com/in/gattikowsik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
