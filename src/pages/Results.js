@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NeighborhoodCard from '../components/NeighborhoodCard';
-
+import './Results.css'; // Assuming you have a CSS file for styling
 const Results = () => {
   const [matches, setMatches] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,0 +1,16 @@
+.questionnaire {
+  padding: 2rem;
+  background: #fff;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 1.5rem;
+}
+
+input[type="range"] {
+  width: 100%;
+}

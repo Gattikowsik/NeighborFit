@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-
+import './NeighborhoodDetail.css'; // Assuming you have a CSS file for styling
 const NeighborhoodDetail = () => {
   const { id } = useParams();
   const [neighborhood, setNeighborhood] = useState(null);

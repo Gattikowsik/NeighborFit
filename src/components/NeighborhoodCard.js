@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './NeighborhoodCard.css'; // Assuming you have a CSS file for styling
 const NeighborhoodCard = ({ neighborhood }) => {
   return (
     <div className="neighborhood-card">

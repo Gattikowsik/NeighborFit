@@ -1,0 +1,44 @@
+.results {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: nowrap;
+}
+
+.carousel-arrow {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.carousel-arrow:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.results-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.pagination-info {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #444;
+}

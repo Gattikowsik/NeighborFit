@@ -1,0 +1,32 @@
+.neighborhood-card {
+  flex: 0 0 280px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.neighborhood-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-details {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.detail-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.detail-button:hover {
+  background-color: #005fa3;
+}
