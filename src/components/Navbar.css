@@ -1,8 +1,9 @@
 .navbar {
-  background-color: #0077cc;
+  background-color: #ffffff;
   padding: 1rem 2rem;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
+  font: bold;
   justify-content: space-between;
   align-items: center;
 }
@@ -14,11 +15,12 @@
 }
 
 .navbar a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
 }
 
 .navbar a:hover {
+  color: dodgerblue;
   text-decoration: underline;
 }

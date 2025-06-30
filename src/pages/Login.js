@@ -18,6 +18,7 @@ const Login = () => {
         <input
           type="email"
           required
+          placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -25,6 +26,8 @@ const Login = () => {
         <input
           type="password"
           required
+          placeholder="Enter your password"
+          minLength="6"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
