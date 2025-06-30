@@ -3,3 +3,32 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
 }
+@media (max-width: 768px) {
+  .info-sections {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .how-overlay, .benefits {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .area-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-content {
+    padding: 1.5rem;
+  }
+
+  .start-button {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

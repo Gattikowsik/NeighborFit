@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Questionnaire.css'; // Assuming you have a CSS file for styling
+import './Questionnaire.css';
 const Questionnaire = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -28,9 +28,9 @@ const Questionnaire = () => {
     navigate('/results');
   };
 
-  const renderSlider = (label, name) => (
+  const renderSlider = (label, name, icon) => (
     <div className="question">
-      <label>{label} ({formData[name]})</label>
+      <label>{icon} {label} ({formData[name]})</label>
       <input
         type="range"
         name={name}
@@ -42,17 +42,19 @@ const Questionnaire = () => {
     </div>
   );
 
+
+
   return (
     <div className="questionnaire">
       <h2>Rate Your Lifestyle Preferences</h2>
       <form onSubmit={handleSubmit}>
-        {renderSlider("Safety", "safety")}
-        {renderSlider("Affordability", "affordability")}
-        {renderSlider("Access to Public Transport", "transport")}
-        {renderSlider("Green Spaces (Parks/Lakes)", "greenSpaces")}
-        {renderSlider("Nightlife & Cafes", "nightlife")}
-        {renderSlider("Schools & Education", "education")}
-        {renderSlider("Proximity to Tech Hubs", "techProximity")}
+        {renderSlider("Safety", "safety", "🛡️")}
+        {renderSlider("Affordability", "affordability", "💰")}
+        {renderSlider("Access to Public Transport", "transport", "🚆")}
+        {renderSlider("Green Spaces (Parks/Lakes)", "greenSpaces", "🌳")}
+        {renderSlider("Nightlife & Cafes", "nightlife", "🌃")}
+        {renderSlider("Schools & Education", "education", "🎓")}
+        {renderSlider("Proximity to Tech Hubs", "techProximity", "💻")}
         <button type="submit">Find My Neighborhood</button>
       </form>
     </div>
