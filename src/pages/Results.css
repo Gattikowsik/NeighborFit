@@ -59,15 +59,29 @@
   gap: 1.5rem;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
+  padding-bottom: 1.5rem;
+  scrollbar-width: thin;         
+  scrollbar-color: #0077cc #eee; 
 }
 
 .results-grid::-webkit-scrollbar {
-  display: none;
+  height: 8px;
 }
-.results-grid {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+.results-grid::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 4px;
+}
+
+.results-grid::-webkit-scrollbar-thumb {
+  background-color: #0077cc;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.results-grid::-webkit-scrollbar-thumb:hover {
+  background-color: #005fa3;
 }
 
 /* ==== PAGINATION ==== */
@@ -77,4 +91,12 @@
   font-size: 1rem;
   color: #444;
   font-weight: 500;
+}
+
+.match-range {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }

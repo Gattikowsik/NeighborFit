@@ -50,10 +50,12 @@ const Results = () => {
   return (
     <div className="results">
       <h2 style={{ textAlign: 'center' }}>Top Matching Neighborhoods for You</h2>
-
-      {matches.length === 0 ? (
+       <div className="match-range">
+        Showing {currentIndex + 1}–{Math.min(currentIndex + cardsPerPage, matches.length)} of {matches.length}
+      </div>
+       {matches.length === 0 ? (
         <p style={{ textAlign: 'center' }}>
-          No data found. Please <Link to="/questionnaire">take the questionnaire</Link> first.
+          No data found, Connect to DB. Please <Link to="/questionnaire">take the questionnaire</Link> first.
         </p>
       ) : (
         <>
