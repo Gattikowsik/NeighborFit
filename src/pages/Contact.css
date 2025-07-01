@@ -1,0 +1,67 @@
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to bottom right, #f9fbff, #e6f2ff);
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgb(0, 0, 0, 0.08);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+}
+
+.contact-card p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-item .icon {
+  font-size: 1.2rem;
+  color: #0077cc;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 2rem;
+}

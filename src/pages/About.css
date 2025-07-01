@@ -1,0 +1,44 @@
+.about-page {
+  background: linear-gradient(to bottom right, #f9fbff, #e6f2ff);
+  padding: 4rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 800px;
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 2.2rem;
+  color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.about-footer {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0077cc;
+}

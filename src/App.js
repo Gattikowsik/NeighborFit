@@ -7,7 +7,8 @@ import NeighborhoodDetail from './pages/NeighborhoodDetail';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login'; 
 import Signup from './pages/Signup';
-
+import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
