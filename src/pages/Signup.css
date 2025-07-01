@@ -1,3 +1,4 @@
+/* ===== Signup.css ===== */
 .auth-form {
   background: #fff;
   padding: 2rem;
@@ -10,20 +11,19 @@
 
 .auth-form h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
   color: #0077cc;
+  margin-bottom: 1.5rem;
 }
 
 .auth-form label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #333;
 }
 
 .auth-form input {
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.65rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -32,8 +32,8 @@
 }
 
 .auth-form input:focus {
-  outline: none;
   border-color: #0077cc;
+  outline: none;
 }
 
 .input-error {
@@ -47,7 +47,6 @@
   font-size: 0.9rem;
 }
 
-/* Toggle Password Button */
 .password-wrapper {
   position: relative;
 }
@@ -75,9 +74,66 @@
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 .auth-form button:hover {
   background-color: #005fa3;
 }
+
+.redirect-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.redirect-text a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
+}
+
+
+.Toastify__toast-body {
+  display: flex;
+  align-items: center;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.Toastify__toast-icon {
+  background: none !important;
+  margin-right: 0.5rem;
+}
+
+.Toastify__toast {
+  display: flex !important;
+  align-items: center !important;
+  font-family: 'Poppins', sans-serif !important;
+  border-radius: 10px !important;
+  padding: 1rem !important;
+}
+
+.Toastify__toast--success {
+  background-color: #e1f7e1 !important;
+  color: #2e7d32 !important;
+  border-left: 6px solid #2e7d32 !important;
+}
+
+.Toastify__toast--error {
+  background-color: #fdecea !important;
+  color: #d32f2f !important;
+  border-left: 6px solid #d32f2f !important;
+}
+
+.Toastify__close-button {
+  background: none !important;
+  color: inherit !important;
+}
+
+

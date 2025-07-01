@@ -6,6 +6,38 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
+.welcome-bar {
+  background-color: #e6f2ff;
+  color: #0077cc;
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-left {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #0077cc;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #005fa3;
+}
 
 .area-grid {
   display: grid;

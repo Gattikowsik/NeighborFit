@@ -1,9 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
+
 const Home = () => {
+  const navigate = useNavigate();
+  const username = localStorage.getItem('username');
+
+  const handleLogout = () => {
+    localStorage.removeItem('username');
+    navigate('/');
+  };
+
   return (
     <div className="home-container">
+      {username && (
+        <div className="welcome-bar">
+          <div className="welcome-left">
+            👋 Hi, <strong>{username}</strong>! <span>Welcome back to NeighborFit.</span>
+          </div>
+          <button className="logout-btn" onClick={handleLogout}>Logout</button>
+        </div>
+      )}
+
       <section className="hero-banner">
         <div className="overlay">
           <h1 className="banner-title">Let Your Preferences Guide You Home.</h1>

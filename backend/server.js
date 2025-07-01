@@ -9,9 +9,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
 // Routes
 const neighborhoodRoutes = require('./routes/neighborhoods');
 app.use('/api/neighborhoods', neighborhoodRoutes);
+
+const authRoutes = require('./routes/auth');
+app.use('/api/auth', authRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
