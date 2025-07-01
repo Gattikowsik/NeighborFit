@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Home.css';
 
 const Home = () => {
@@ -7,12 +9,15 @@ const Home = () => {
   const username = localStorage.getItem('username');
 
   const handleLogout = () => {
+    const name = localStorage.getItem('username');
     localStorage.removeItem('username');
+    toast.info(`${name} logged out`);
     navigate('/');
   };
 
   return (
     <div className="home-container">
+      <ToastContainer theme="colored" autoClose={2500} />
       {username && (
         <div className="welcome-bar">
           <div className="welcome-left">
