@@ -1,18 +1,55 @@
-.detail-container {
+.neighborhood-detail {
   padding: 2rem;
-  max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 700px;
   margin: auto;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
-.detail-container h2 {
-  margin-bottom: 1rem;
+.neighborhood-detail h2 {
   color: #0077cc;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.detail-container ul {
-  padding-left: 1rem;
-  line-height: 1.7;
+.detail-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.detail-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+}
+
+.detail-card li:last-child {
+  border-bottom: none;
+}
+
+.back-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #0077cc;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #005fa3;
+}
+
+/* For loading & not found */
+.loading, .not-found {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #555;
 }

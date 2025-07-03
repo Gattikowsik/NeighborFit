@@ -59,4 +59,15 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// GET /api/neighborhoods/names
+router.get('/names', async (req, res) => {
+  try {
+    const neighborhoods = await Neighborhood.find({}, 'id name');
+    res.json(neighborhoods);
+  } catch (err) {
+    res.status(500).json({ message: 'Failed to fetch neighborhood names' });
+  }
+});
+
+
 module.exports = router;

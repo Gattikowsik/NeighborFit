@@ -17,6 +17,9 @@ app.use('/api/neighborhoods', neighborhoodRoutes);
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
 
+app.use('/api/neighborhoods', require('./routes/neighborhood'));
+
+
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -7,6 +7,9 @@ import './Home.css';
 const Home = () => {
   const navigate = useNavigate();
   const username = localStorage.getItem('username');
+  const [query, setQuery] = useState('');
+  const [allNeighborhoods, setAllNeighborhoods] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
 
   const handleLogout = () => {
     const name = localStorage.getItem('username');
@@ -14,6 +17,52 @@ const Home = () => {
     toast.info(`${name} logged out`);
     navigate('/');
   };
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/neighborhoods')
+      .then(res => res.json())
+      .then(data => {
+        setAllNeighborhoods(data); // Store full objects
+      })
+      .catch(err => {
+        console.error('Failed to fetch neighborhoods', err);
+      });
+  }, []);
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setQuery(value);
+
+    const filtered = allNeighborhoods.filter(n =>
+      n.name.toLowerCase().startsWith(value.toLowerCase())
+    );
+    setSuggestions(value ? filtered : []);
+  };
+
+  const handleSelect = (neighborhood) => {
+    setQuery(neighborhood.name);
+    setSuggestions([]);
+    navigate(`/neighborhood/${neighborhood.id}`);
+  };
+
+  const handleSearch = () => {
+    const match = allNeighborhoods.find(n =>
+      n.name.toLowerCase() === query.trim().toLowerCase()
+    );
+
+    if (match) {
+      navigate(`/neighborhood/${match.id}`);
+    } else {
+      toast.error('Neighborhood not found!');
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
 
   return (
     <div className="home-container">
@@ -31,8 +80,24 @@ const Home = () => {
         <div className="overlay">
           <h1 className="banner-title">Let Your Preferences Guide You Home.</h1>
           <div className="banner-search">
-            <input type="text" placeholder="Enter Neighborhood in Bangalore..." />
-            <button>🔍</button>
+            <input
+              type="text"
+              placeholder="Enter Neighborhood in Bangalore..."
+              value={query}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
+            />
+            <button onClick={handleSearch}>🔍</button>
+            {suggestions.length > 0 && (
+              <ul className="suggestions-list">
+                {suggestions.map((n, i) => (
+                  <li key={i} onClick={() => handleSelect(n)}>
+                    {n.name}
+                  </li>
+                ))}
+              </ul>
+            )}
+
           </div>
         </div>
       </section>
@@ -76,7 +141,7 @@ const Home = () => {
           <div className="area-card">🏙️ Indiranagar</div>
           <div className="area-card">🌳 Jayanagar</div>
           <div className="area-card">🚲 HSR Layout</div>
-          <div className="area-card">🛍️ MG Road</div>
+          <div className="area-card">💻 Electronic City</div>
           <div className="area-card">☕ Whitefield</div>
           <div className="area-card">🌆Koramangala</div>
         </div>
