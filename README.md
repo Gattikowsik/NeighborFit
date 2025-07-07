@@ -1,43 +1,60 @@
 # 🏡 NeighborFit – Smart Neighborhood Matcher
 
-**NeighborFit** is a full-stack web application that helps users discover the best neighborhoods in a city based on their lifestyle preferences such as safety, affordability, green spaces, education, transport, nightlife, and tech proximity.
+**NeighborFit** is a full-stack web application that helps users discover the best neighborhoods in a city (starting with Bangalore) based on their lifestyle preferences — such as safety, affordability, green spaces, education, transport, nightlife, and tech proximity.
 
-🚀 Built using **React + Node.js + Express + MongoDB**.
-
----
-
-## 🎯 Features
-
-- 🧠 **Smart Matching Algorithm**: Calculates the best-fit neighborhoods based on weighted scoring.
-- 📋 **Interactive Questionnaire**: Collects user preferences through sliders.
-- 📊 **Match Results with Pagination**: Displays top 20+ neighborhoods, 5 at a time, with ← / → arrows.
-- 🏘️ **Neighborhood Detail View**: Clickable cards to explore deeper information.
-- 💾 **LocalStorage Support**: Stores user preferences without requiring login.
-- 🔗 **REST API**: Clean, modular Express backend with MongoDB database.
-- 🌐 **CORS-enabled** for frontend-backend integration.
+🔗 **Live Demo**: [https://neighborfit-blond.vercel.app/](https://neighborfit-blond.vercel.app/)  
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Tech Stack
 
-| Layer       | Technology              |
-|-------------|--------------------------|
-| Frontend    | React, CSS (Vanilla)     |
-| Backend     | Node.js, Express         |
-| Database    | MongoDB Atlas (Mongoose) |
-| Hosting     | Render, Vercel |
-| State       | useState, useEffect, localStorage |
+| Layer      | Technology                         |
+|------------|-------------------------------------|
+| Frontend   | React, Vanilla CSS                  |
+| Backend    | Node.js, Express                    |
+| Database   | MongoDB Atlas (with Mongoose)       |
+| State Mgmt | `useState`, `useEffect`, `localStorage` |
+| Hosting    | Vercel (Frontend), Render (Backend) |
 
 ---
 
-## 🧠 How Matching Works
+## 🎯 Key Features
 
-Each neighborhood has scores (1–5) for 7 lifestyle criteria.
+- 🧠 **Smart Matching Algorithm**  
+  Calculates best-fit neighborhoods using weighted preference scoring.
 
-The backend calculates a weighted match score using this formula:
+- 📋 **Interactive Questionnaire**  
+  Users input their preferences via responsive sliders.
+
+- 📊 **Paginated Match Results**  
+  Shows top 20+ neighborhood matches, 5 at a time with ← / → arrows.
+
+- 🏘️ **Neighborhood Detail View**  
+  Clickable cards give deeper insights into each locality.
+
+- 🔍 **Smart Search with Auto-Suggestions**  
+  Real-time suggestions and direct navigation to detail pages.
+
+- 💾 **LocalStorage Support**  
+  Stores user preferences and session info client-side (no login required).
+
+- 🔐 **Auth System**  
+  Signup/login functionality with toast notifications and logout state.
+
+- 🔗 **RESTful API**  
+  Modular Express API with routes for matching and neighborhood data.
+
+- 🌐 **CORS-Enabled & Full Integration**  
+  Seamless communication between frontend and backend.
+
+---
+
+## 🧠 Matching Logic
+
+Each neighborhood has scores between **1–5** for the 7 lifestyle criteria.  
+The backend calculates the match percentage using:
 
 ```js
 total += prefs[feature] * neighborhood[feature];
 max += prefs[feature] * 5;
 matchPercent = (total / max) * 100;
- 
