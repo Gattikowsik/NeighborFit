@@ -16,7 +16,7 @@ const Results = () => {
 
     // If coming from search, fetch by neighborhood name
     if (searchedNeighborhood) {
-      fetch(`http://localhost:5000/api/neighborhoods/search/${searchedNeighborhood}`)
+      fetch(`https://neighborfit-backend-k0cm.onrender.com/api/neighborhoods/search/${searchedNeighborhood}`)
         .then(res => {
           if (!res.ok) throw new Error('Failed to fetch search result');
           return res.json();
@@ -35,7 +35,7 @@ const Results = () => {
       const userPrefs = JSON.parse(storedPrefs);
       console.log("📦 Sending preferences to backend:", userPrefs);
 
-      fetch('http://localhost:5000/api/neighborhoods/match', {
+      fetch('https://neighborfit-backend-k0cm.onrender.com/api/neighborhoods/match', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userPrefs),

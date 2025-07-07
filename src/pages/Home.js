@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/neighborhoods')
+    fetch('https://neighborfit-backend-k0cm.onrender.com/api/neighborhoods')
       .then(res => res.json())
       .then(data => {
         setAllNeighborhoods(data); // Store full objects

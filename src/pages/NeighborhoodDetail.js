@@ -9,7 +9,7 @@ const NeighborhoodDetail = () => {
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/neighborhoods/${id}`)
+    fetch(`https://neighborfit-backend-k0cm.onrender.com/api/neighborhoods/${id}`)
       .then(res => {
         if (!res.ok) {
           setNotFound(true);
